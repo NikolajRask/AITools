@@ -1,0 +1,26 @@
+.container {
+    max-width: 1300px;
+    margin-left: calc(50vw - 650px);
+    margin-top: 20px;
+
+    .search {
+        margin-bottom: 10px;
+        font-size: 15px;
+        padding-left: 40px;
+    }
+
+    .searchIcon {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        margin-top: 8px;
+        margin-left: 10px;
+    }
+}
+
+.toolsContainer {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 15px;
+}
+
