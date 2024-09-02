@@ -1,0 +1,30 @@
+.formContainer {
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: calc(100vh - 140px);
+}
+
+.title {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+    margin-top: 0px;
+}
+
+.category {
+    width: 100%;
+}
+
+.submitBtnWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

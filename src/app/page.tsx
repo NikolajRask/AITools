@@ -6,6 +6,8 @@ import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
 
 export default function Home() {
 
+
+
   const tools = [
     {
       name: "Test Tool",
@@ -21,17 +23,25 @@ export default function Home() {
           <MagnifyingGlassIcon className={styles.searchIcon}></MagnifyingGlassIcon>
           <Input
             className={styles.search}
-            type="text"
+            type="search"
             placeholder="Search"
           ></Input>
         </div>
+        <h3 className={styles.toolsTitle}>Featured</h3>
         <div className={styles.toolsContainer}>
-          <Tool title="Hello World" description="Hello World Description"></Tool>
-          <Tool title="Hello World" description="Hello World Description"></Tool>
-          <Tool title="Hello World" description="Hello World Description"></Tool>
-          <Tool title="Hello World" description="Hello World Description"></Tool>
-          <Tool title="Hello World" description="Hello World Description"></Tool>
+          <Tool title="Messenger" featured={true} description="Messenger is Meta's app for texting, voice/video calls, and media sharing. Originally part of Facebook, it now stands alone."></Tool>
+          <Tool title="Messenger" featured={true} description="Messenger is Meta's app for texting, voice/video calls, and media sharing. Originally part of Facebook, it now stands alone."></Tool>
+          <Tool title="Messenger" featured={true} description="Messenger is Meta's app for texting, voice/video calls, and media sharing. Originally part of Facebook, it now stands alone."></Tool>
         </div>
+
+        <h3 className={styles.toolsTitle}>Others</h3>
+
+        <div className={styles.toolsContainer}>
+          <Tool title="Messenger" description="Messenger is Meta's app for texting, voice/video calls, and media sharing. Originally part of Facebook, it now stands alone."></Tool>
+          <Tool title="Messenger" description="Messenger is Meta's app for texting, voice/video calls, and media sharing. Originally part of Facebook, it now stands alone."></Tool>
+          <Tool title="Messenger" description="Messenger is Meta's app for texting, voice/video calls, and media sharing. Originally part of Facebook, it now stands alone."></Tool>
+        </div>
+
       </main>
     </>
   );

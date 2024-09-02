@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import styles from './navbar.module.scss'
 import { Button } from '@/components/ui/button'
@@ -5,12 +7,15 @@ import { Button } from '@/components/ui/button'
 const Navbar = () => {
   return (
     <nav className={styles.navbar}>
-        <h1 className={styles.logo}>AITools</h1>
+        <h1 className={styles.logo} onClick={() => {
+          window.location.href = "/"
+        }}>AITools</h1>
         <div className={styles.navItemsWrapper}>
-            <p className={styles.navItem}>Home</p>
-            <p className={styles.navItem}>Other</p>
-            <p className={styles.navItem}>Other 2</p>
-            <Button>
+            <a href={'/'} className={styles.navItem}>Browse</a>
+            <a href={'https://nikorask.medium.com'} className={styles.navItem}>Blog</a>
+            <Button onClick={() => {
+              window.location.href = "/submit"
+            }}>
               Submit App
             </Button>
         </div>

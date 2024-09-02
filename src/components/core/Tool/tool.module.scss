@@ -1,37 +1,85 @@
 $background-subdued: rgb(245, 245, 245);
-$border-radius: 10px;
+$background-subdued-hover: rgb(234, 234, 234);
+$border-radius: 20px;
 
 .tool {
-
     cursor: pointer;
     padding: 15px;
-    background: $background-subdued;
+    background-color: $background-subdued;
     outline: none;
     border: none;
-    display: flex;
-    gap: 20px;
+    max-width: calc(1300px / 3);
+    position: relative;
+    transition: background-color 1s ease;
+    overflow: hidden;
 
-    .title {
-        font-size: 21px;
-        font-weight: 700;
+    &:hover {
+        background-color: $background-subdued-hover;
+    }
+
+    .featuedBlob {
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        background: rgb(19,8,205);
+        background: linear-gradient(135deg, rgba(19,8,205,1) 0%, rgba(255,136,0,1) 100%);
+        filter: blur(35px);
+        left: 10px;
+        top: 10px;
+        border-radius: 50%;
+    }
+
+    .toolFlex {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        z-index: 10;
+
+
+        .title {
+            font-size: 21px;
+            font-weight: 700;
+            z-index: 10;
+        }
+    
+        .description {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            line-clamp: 3;
+            -webkit-box-orient: vertical;  
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-top: 4px;
+            line-height: 145%;
+            z-index: 10;
+        }
+    
+        .textWrapper {
+            max-width: calc(100% - 100px);
+            z-index: 10;
+        }
+    
+        .logo {
+            padding: 10px;
+            border-radius: $border-radius;
+            max-height: 100px;
+            z-index: 10;
+        }
+    
+
+
+
         
     }
 
-    .description {
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        line-clamp: 3;
-        -webkit-box-orient: vertical;  
-        overflow: hidden;
-        text-overflow: ellipsis;
-        margin-top: 4px;
-        line-height: 125%;
+    .tags {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        display: flex;
+        gap: 5px;
+
     }
 
-    .logo {
-        width: 60px;
-        height: 60px;
-        border-radius: $border-radius;
-    }
-
+ 
 }
