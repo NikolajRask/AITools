@@ -1,0 +1,22 @@
+export const aiToolCategories: string[] = [
+    "Writing & Content Creation",
+    "Productivity & Workflow",
+    "Finance & Accounting",
+    "Marketing & Sales",
+    "Customer Service & Support",
+    "Design & Creativity",
+    "Data Analysis & Business Intelligence",
+    "Education & Learning",
+    "Healthcare & Medicine",
+    "Legal & Compliance",
+    "Human Resources & Recruitment",
+    "Security & Fraud Detection",
+    "E-commerce & Retail",
+    "Entertainment & Media",
+    "Speech & Language Processing",
+    "Personalization & Recommendation",
+    "Supply Chain & Logistics",
+    "Research & Development",
+    "Gaming & Virtual Reality",
+    "Other"
+  ];

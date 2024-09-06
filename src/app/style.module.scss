@@ -3,6 +3,11 @@
     margin-left: calc(50vw - 650px);
     margin-top: 20px;
 
+    .flex {
+        display: flex;
+        gap: 10px;
+    }
+
     .search {
         margin-bottom: 10px;
         font-size: 15px;
@@ -30,7 +35,7 @@
 
 .toolsContainer {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
     gap: 15px;
 }
 

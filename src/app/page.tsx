@@ -3,10 +3,11 @@ import Image from "next/image";
 import styles from './style.module.scss'
 import { Input } from "@/components/ui/input";
 import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
+import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { aiToolCategories } from "@/content/categories";
+import { api } from "@/utils/trpc";
 
 export default function Home() {
-
-
 
   const tools = [
     {
@@ -15,6 +16,7 @@ export default function Home() {
       imageUrl: ""
     }
   ]
+
   
   return (
     <>
@@ -26,6 +28,40 @@ export default function Home() {
             type="search"
             placeholder="Search"
           ></Input>
+
+          <div className={styles.flex} style={{
+            marginBottom: 10,
+          }}>
+            <Select>
+              <SelectTrigger className="w-[180px]">
+                <SelectValue placeholder="Select a category" />
+              </SelectTrigger>
+              <SelectContent className={styles.category}>
+                <SelectGroup>
+                  <SelectLabel>Categories</SelectLabel>
+                  {
+                    aiToolCategories.map((category, index) => {
+                      return <SelectItem value={category}>{category}</SelectItem>
+                    })
+                  }
+                </SelectGroup>
+              </SelectContent>
+            </Select> 
+
+            <Select>
+              <SelectTrigger className="w-[180px]">
+                <SelectValue placeholder="Filter after type" />
+              </SelectTrigger>
+              <SelectContent className={styles.category}>
+                <SelectGroup>
+                  <SelectLabel>Type</SelectLabel>
+                  <SelectItem value="apple">Free</SelectItem>
+                  <SelectItem value="banana">Freemium</SelectItem>
+                  <SelectItem value="blueberry">Paid</SelectItem>
+                </SelectGroup>
+              </SelectContent>
+            </Select>    
+          </div>      
         </div>
         <h3 className={styles.toolsTitle}>Featured</h3>
         <div className={styles.toolsContainer}>

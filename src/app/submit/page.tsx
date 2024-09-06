@@ -8,6 +8,7 @@ import { Label } from '@/components/ui/label'
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
+import { aiToolCategories } from '@/content/categories'
 
 const Page = () => {
 
@@ -20,6 +21,7 @@ const Page = () => {
                 <form>
                     <Label>Tool Name</Label>
                     <Input placeholder="Name"/>
+
 
                     <Label>Tool Description 
                         <a style={{
@@ -41,7 +43,24 @@ const Page = () => {
                         </SelectTrigger>
                         <SelectContent className={styles.category}>
                             <SelectGroup>
-                                <SelectLabel>Categories</SelectLabel>
+                            <SelectLabel>Categories</SelectLabel>
+                            {
+                                aiToolCategories.map((category, index) => {
+                                return <SelectItem value={category}>{category}</SelectItem>
+                                })
+                            }
+                            </SelectGroup>
+                        </SelectContent>
+                    </Select>
+
+                    <Label>Type</Label>
+                    <Select>
+                        <SelectTrigger className="w-[180px]">
+                            <SelectValue placeholder="Select a type" />
+                        </SelectTrigger>
+                        <SelectContent className={styles.category}>
+                            <SelectGroup>
+                                <SelectLabel>type</SelectLabel>
                                 <SelectItem value="apple">Free</SelectItem>
                                 <SelectItem value="banana">Freemium</SelectItem>
                                 <SelectItem value="blueberry">Paid</SelectItem>
